@@ -7,6 +7,10 @@ body {
     
 }
 
+h2, h4, p, a, button, .pricing-left h1, .pricing-left p, .pricing-right h2, .pricing-right p {
+    font-family: 'Poppins', sans-serif;
+}
+
 #services {
     padding: 50px;
     margin-top: 40px;
@@ -118,10 +122,10 @@ input[type="radio"] {
 #faq-container {
     display: flex;
     align-items: center;
-    background-image: url("image1.jpg");
+    background-image: url("image1.png");
     background-size: 36%;
     background-repeat: no-repeat;
-    height: 70vh;
+    height:80vh;
 }
 
 .faq-text {
@@ -135,17 +139,18 @@ input[type="radio"] {
 .faq-item-container {
     display: flex;
     flex-direction: column;
+
 }
 
 .faq-item {
-    width: 700px;
+    width: 650px;
     background-color: white;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 0px 30px;
 }
 
-.faq-item>input[type="checkbox"] {
+.faq-item > input[type="checkbox"] {
     display: none;
 }
 
@@ -154,6 +159,7 @@ input[type="radio"] {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    height: 60px;
 }
 
 .faq-item p {
@@ -172,26 +178,112 @@ h4 {
     font-size: 30px;
     font-weight: 100;
 }
-
-.faq-item>input[type="checkbox"]:checked~p {
+.faq-item > input[type="checkbox"]:checked ~ p {
     display: block;
 }
 
-
-.faq-item>input[type="checkbox"]:checked~.collapse .less::after {
+/* Change plus/minus when checked */
+.faq-item > input[type="checkbox"]:checked ~ .collapse .less::after {
     content: '—';
 }
 
-.faq-item>input[type="checkbox"]:not(:checked)~.collapse .less::after {
+.faq-item > input[type="checkbox"]:not(:checked) ~ .collapse .less::after {
     content: '+';
 }
 
+
+/* Making it responsive on screen sizes < 1280 */
+@media screen and (max-width: 1300px) {
+    #faq-container {
+        background-position-y: 50%;
+    }
+
+    .faq-text {
+        font-size: 43px;
+        padding-left: 100px;
+    }
+
+    .faq-item {
+        width: 500px;
+    }
+
+    .faq-item p {
+        font-size: 17px;
+    }
+
+    h4 {
+        font-size: 19px;
+    }
+
+    .less {
+        font-size: 28px;
+    }
+
+}
+
+/* Making it responsive on screen sizes < 1000 */
+@media screen and (max-width: 1000px) {
+    #faq-container {
+        background-size: 60%;
+        flex-direction: column;
+        background-position-y: top;
+    }
+
+    .faq-text {
+        font-size: 45px;
+        margin: 70px 0px 55px;
+        padding-left: 0px;
+    }
+
+    .faq-item {
+        width: 420px;
+    }
+
+    .faq-item p {
+        font-size: 16px;
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+
+    .less {
+        font-size: 25px;
+    }
+    
+}
+
+/* Making it responsive on screen sizes = 480 */
+@media screen and (max-width: 480px) {
+ 
+    .faq-text {
+        font-size: 35px;
+        margin: 70px 0px 50px;
+        padding-left: 0px;
+    }
+
+    .faq-item {
+        width: 300px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+
+    .less {
+        font-size: 23px;
+    }
+}
 .nav-container {
     position: fixed;
     top: 0;
     background-color: rgba(255, 255, 255, 0.909);
     width: 100%;
-    height: auto;
+    height: 50px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -206,7 +298,7 @@ h4 {
     padding: 0 30px;
     background-color: #0fb4a7;
     padding-top: 10px;
-    height: 180px;
+    height: 60px;
 }
 
 .navlinks {
@@ -256,6 +348,7 @@ main {
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
 
 
@@ -300,7 +393,7 @@ main {
     cursor: pointer;
 }
 
-.antony {
+#antony {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -380,8 +473,6 @@ form {
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    gap: 10px;
-    width: 100%;
 }
 
 label {
@@ -431,73 +522,123 @@ button:hover {
     background: black;
 }
 
-.oyin {
+#oyin {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+#footer1 {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px 15px; /* Reduced padding */
+    font-family: 'Arial', sans-serif;
 }
 
 .footer {
-    width: 100%;
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px; /* Reduced bottom padding */
+}
+
+.footer-left {
+    max-width: 350px; /* Adjusted for better fit */
 }
 
 .footer-left h2 {
-    margin-bottom: 10px;
+    font-size: 20px; /* Reduced font size */
+    margin-bottom: 5px; /* Reduced margin */
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.footer-right {
+.footer-left i {
+    font-size: 22px; /* Reduced icon size */
+    color: #e1306c; /* Instagram color */
+}
+
+.footer-left p {
+    font-size: 13px; /* Slightly smaller text */
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.footer-nav {
     display: flex;
+    gap: 15px; /* Reduced spacing */
 }
 
 .footer-nav a {
     text-decoration: none;
-    color: rgb(65, 45, 45);
-    font-weight: bold;
-    gap: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px; /* Reduced font size */
+    transition: color 0.3s;
 }
 
-.footer-nav a:hover,
-.footer-bottom a:hover {
-    color: #ff7e5f;
-}
-
-.footer-right a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.footer-nav a:hover {
+    color: #00ffcc; /* Highlight color */
 }
 
 .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-}
-
-.footer-bottom a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-    margin-right: 15px;
-}
-
-.footer-bottom .fa-heart {
-    color: red;
+    margin-top: 10px; /* Reduced margin */
 }
 
 .footer-bottom p {
-    margin-left: 20px;
+    font-size: 12px; /* Smaller text */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px; /* Reduced spacing */
+}
+
+.footer-social a {
+    text-decoration: none;
+    font-size: 18px; /* Reduced icon size */
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #00ffcc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 8px; /* Reduced spacing */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px; /* Reduced gap */
+    }
+}
+
+p{
+    text-align: center;
 }
