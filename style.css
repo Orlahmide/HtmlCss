@@ -642,3 +642,7 @@ button:hover {
 p{
     text-align: center;
 }
+
+.navbar img{
+    border-radius: 30px;
+}
