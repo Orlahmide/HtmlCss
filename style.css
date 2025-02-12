@@ -1,0 +1,503 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dde0e6, #a8c0ff); 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+#services {
+    padding: 50px;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.carousel-container {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 130%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-controls {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.control-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked~.carousel-track {
+    transform: translateX(0%);
+}
+
+#slide2:checked~.carousel-track {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.carousel-track {
+    transform: translateX(-200%);
+}
+
+#faq-container {
+    display: flex;
+    align-items: center;
+    background-image: url("image1.jpg");
+    background-size: 36%;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.faq-text {
+    width: 30%;
+    font-size: 58px;
+    font-weight: bold;
+    padding-left: 200px;
+    margin-bottom: 40px;
+}
+
+.faq-item-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    width: 700px;
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 0px 30px;
+}
+
+.faq-item>input[type="checkbox"] {
+    display: none;
+}
+
+.collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-item p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: rgb(137, 134, 134);
+    font-size: 18px;
+    display: none;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.less {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.faq-item>input[type="checkbox"]:checked~p {
+    display: block;
+}
+
+
+.faq-item>input[type="checkbox"]:checked~.collapse .less::after {
+    content: '—';
+}
+
+.faq-item>input[type="checkbox"]:not(:checked)~.collapse .less::after {
+    content: '+';
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.909);
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #0fb4a7;
+    padding-top: 10px;
+    height: 180px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 50px;
+    color: black;
+    align-items: center;
+}
+
+.navlinks a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#thd {
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px;
+    width: 90px;
+    background-color: #3dd6b5;
+}
+
+main {
+    height: 400px;
+    text-align: center;
+}
+
+#first {
+    font-size: 64px;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 130px;
+    padding-bottom: 40px;
+}
+
+
+.pricing-container {
+    display: flex;
+    gap: 40px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pricing-left {
+    flex: 1;
+}
+
+.pricing-left h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.pricing-left p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.meeting-box {
+    background: #f7f9ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.meeting-box h2 {
+    font-size: 18px;
+    color: #1d1d1d;
+    margin-bottom: 10px;
+}
+
+.schedule-btn {
+    background-color: #5a55fe;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.antony {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-btn:hover {
+    background-color: #4a46e0;
+}
+
+/* Right Section */
+.pricing-right {
+    flex: 1;
+}
+
+.pricing-right h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.pricing-right p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.services-list {
+    list-style: none;
+    margin-top: 12px;
+}
+
+.services-list li {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.price-box {
+    background: #eef1ff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.per-month {
+    font-size: 16px;
+    color: #666;
+    margin-left: 4px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    background-color: #87c3fc;
+    margin-bottom: 100px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    color: black;
+}
+
+h1 {
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    gap: 50px;
+}
+
+#secondButton {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    width: 200px;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+    width: 400px;
+}
+
+button:hover {
+    background: black;
+}
+
+.oyin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+}
+
+.footer-right {
+    display: flex;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgb(65, 45, 45);
+    font-weight: bold;
+    gap: 50px;
+}
+
+.footer-nav a:hover,
+.footer-bottom a:hover {
+    color: #ff7e5f;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.footer-bottom .fa-heart {
+    color: red;
+}
+
+.footer-bottom p {
+    margin-left: 20px;
+}
